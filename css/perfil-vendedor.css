@@ -1,0 +1,56 @@
+/* Estilos para la foto de perfil */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Estilos para el encabezado */
+  .card-title#perfil-de-vendedor {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+  
+  /* Estilos para los campos del formulario */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group .form-control {
+    border-color: #ccc;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+  }
+  
+  .form-group .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Estilos para los botones */
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004a9b;
+  }
+  
+  /* Estilos para los textos pequeños */
+  small.form-text {
+    font-size: 0.85rem;
+    color: #6c757d;
+  }

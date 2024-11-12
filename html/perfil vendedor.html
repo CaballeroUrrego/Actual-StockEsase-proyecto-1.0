@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Vendedor - StockEase</title>
+    <link rel="stylesheet" href="/css/perfil-vendedor.css">
+    <link rel="icon" href="img/logo.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h1 class="card-title" id="perfil-de-vendedor">Perfil de Vendedor</h1>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-edit"></i> Editar perfil
+                            </button>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <img src="/img/administrador.jpg" alt="Foto de perfil" class="profile-pic mb-3">
+                                <h4>Duber Muñoz</h4>
+                              
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="description"><i class="fas fa-info-circle"></i> Descripción</label>
+                                    <textarea class="form-control" id="description" rows="3" placeholder="Escribe una breve descripción de ti y tus productos">Soy un vendedor con más de 5 años de experiencia en la venta de productos para el hogar. Ofrezco una amplia gama de artículos de alta calidad a precios competitivos.</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="categories"><i class="fas fa-tags"></i> Categorías</label>
+                                    <input type="text" class="form-control" id="categories" placeholder="Ingresa las categorías de tus productos" value="Hogar, Decoración, Electrodomésticos">
+                                </div>
+                                <div class="form-group">
+                                    <label for="location"><i class="fas fa-map-marker-alt"></i> Ubicación</label>
+                                    <input type="text" class="form-control" id="location" placeholder="Ingresa tu ubicación" value="Medellin colombia">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone"><i class="fas fa-phone"></i> Teléfono</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="Ingresa tu número de teléfono" value="+57 3023228386">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email"><i class="fas fa-envelope"></i> Correo electrónico</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" value="urregosebastian462@gmail.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="documents"><i class="fas fa-file-upload"></i> Documentos de verificación</label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="documents" multiple>
+                                        <label class="custom-file-label" for="documents">Selecciona tus documentos</label>
+                                    </div>
+                                    <small class="form-text text-muted">Carga tus documentos de identificación y otros documentos requeridos para ser verificado como vendedor en la plataforma.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

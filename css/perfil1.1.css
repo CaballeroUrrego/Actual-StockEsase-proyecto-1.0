@@ -1,0 +1,66 @@
+* {
+    font-family: "Dongle", sans-serif;
+}
+
+.profile-picture {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #e4e4e4;
+    margin: 2rem auto;
+}
+
+.edit-icon {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: white;
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+    border-right: 1px solid #dee2e6;
+    min-height: 100vh;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    padding: 0.8rem 1rem;
+    color: #212529;
+}
+
+.nav-link:hover {
+    background-color: #f8f9fa;
+}
+
+.verified-badge {
+    color: #1da1f2;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.info-card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.upload-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-btn input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+

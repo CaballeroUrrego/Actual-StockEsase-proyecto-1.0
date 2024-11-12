@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacion de  Producto -StockEase</title>
+    <link rel="icon" href="/img/logo.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/Informacion de producto.css">
+    <!-- Google Fonts - Dongle -->
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container-fluid py-4">
+        <!-- Product Header -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1 class="product-title">Información de Producto</h1>
+                    <div>
+                        <button class="btn btn-outline-primary me-2">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                        <button class="btn btn-outline-danger">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Images Gallery -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="main-image">
+                    <img src="../img/import.png" class="img-fluid rounded" alt="Main product image">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="d-flex flex-column h-100">
+                    <div class="secondary-image mb-3">
+                        <img src="../img/import.png" class="img-fluid rounded" alt="Secondary image">
+                    </div>
+                    <div class="secondary-image">
+                        <img src="../img/import.png" class="img-fluid rounded" alt="Secondary image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="map-container">
+                    <img src="../img/map1.png" class="img-fluid rounded" alt="Location map">
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="row">
+            <!-- Left Column - Comments -->
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3>Comentarios (0.0) <i class="fas fa-star text-warning"></i></h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- Comment Form -->
+                        <div class="d-flex mb-4">
+                            <div class="avatar me-2"></div>
+                            <div class="flex-grow-1">
+                                <textarea class="form-control" placeholder="Deja su reseña" rows="2"></textarea>
+                            </div>
+                            <button class="btn btn-primary ms-2">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+
+                        <!-- Comments List -->
+                        <div class="comments-container">
+                            <!-- Comment Item Template -->
+                            <div class="comment-item mb-3">
+                                <div class="d-flex">
+                                    <div class="avatar me-3"></div>
+                                    <div class="comment-content">
+                                        <h5 class="mb-1">Nombre Usuario</h5>
+                                        <small class="text-muted">Fecha</small>
+                                        <p class="mt-2">Comentario...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Repeat comment items as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Price and Booking -->
+            <div class="col-md-4">
+                <div class="card booking-card">
+                    <div class="card-body">
+                        <h2 class="price-text">$000,000.00 COP</h2>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-star text-warning me-2"></i>
+                            <span>0.0 (Comentarios)</span>
+                        </div>
+
+                        <!-- Date Selection -->
+                        <div class="date-picker mb-4">
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <label>LLEGADA</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="col-6">
+                                    <label>SALIDA</label>
+                                    <input type="date" class="form-control" value="2024-12-25">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Quantity -->
+                        <div class="mb-4">
+                            <h4>Producto</h4>
+                            <select class="form-select">
+                                <option>Cantidad de producto</option>
+                            </select>
+                        </div>
+
+                        <!-- Book Button -->
+                        <button class="btn btn-primary w-100 mb-4">Obtener</button>
+
+                        <!-- Cost Breakdown -->
+                        <div class="costs">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Costo Servicios</span>
+                                <span>$000,000.00 COP</span>
+                            </div>
+                           
+                            <hr>
+                            <div class="d-flex justify-content-between fw-bold">
+                                <span>Total del Costo</span>
+                                <span>$000,000.00 COP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Information -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <!-- Publisher Info -->
+                            <div class="col-md-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="publisher-avatar me-3"></div>
+                                    <div>
+                                        <p class="mb-0">Nombre del que hizo publicacion:</p>
+                                        <h5 class="mb-0">Sebastian Urrego</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product Care -->
+                            <div class="col-md-4">
+                                <h4>Cuidado del producto</h4>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check me-2"></i>Cuidado</li>
+                                    <li><i class="fas fa-check me-2"></i>Cuidado</li>
+                                    <li><i class="fas fa-check me-2"></i>Cuidado</li>
+                                </ul>
+                            </div>
+                            <!-- Description -->
+                            <div class="col-md-4">
+                                <h4>Descripción</h4>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-info-circle me-2"></i>Información</li>
+                                    <li><i class="fas fa-info-circle me-2"></i>Información</li>
+                                    <li><i class="fas fa-info-circle me-2"></i>Información</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
