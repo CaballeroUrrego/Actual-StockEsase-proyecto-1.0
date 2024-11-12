@@ -7,50 +7,50 @@ GO
 
 -- Tabla de Roles: Almacena los diferentes roles de usuario
 CREATE TABLE Roles (
-    id INT PRIMARY KEY IDENTITY, -- Identificador único para cada rol, se incrementa automáticamente
-    nombre NVARCHAR(50) NOT NULL -- Nombre del rol (Gerente, Encargado de almacén)
+    id INT PRIMARY KEY IDENTITY, -- Identificador ï¿½nico para cada rol, se incrementa automï¿½ticamente
+    nombre NVARCHAR(50) NOT NULL -- Nombre del rol (Gerente, Encargado de almacï¿½n)
 );
 
--- Tabla de Usuarios: Almacena información sobre los usuarios del sistema
+-- Tabla de Usuarios: Almacena informaciï¿½n sobre los usuarios del sistema
 CREATE TABLE Usuarios (
-    id INT PRIMARY KEY IDENTITY, -- Identificador único para cada usuario, se incrementa automáticamente
+    id INT PRIMARY KEY IDENTITY, -- Identificador ï¿½nico para cada usuario, se incrementa automï¿½ticamente
     nombre NVARCHAR(100) NOT NULL, -- Nombre del usuario
-    rol_id INT NOT NULL FOREIGN KEY REFERENCES Roles(id), -- Referencia al rol del usuario (relación con la tabla Roles)
-    email NVARCHAR(100) NOT NULL UNIQUE, -- Correo electrónico del usuario, debe ser único
-    contraseña NVARCHAR(100) NOT NULL -- Contraseña del usuario
+    rol_id INT NOT NULL FOREIGN KEY REFERENCES Roles(id), -- Referencia al rol del usuario (relaciï¿½n con la tabla Roles)
+    email NVARCHAR(100) NOT NULL UNIQUE, -- Correo electrï¿½nico del usuario, debe ser ï¿½nico
+    contraseï¿½a NVARCHAR(100) NOT NULL -- Contraseï¿½a del usuario
 );
 
--- Tabla de Productos: Almacena información sobre los productos disponibles
+-- Tabla de Productos: Almacena informaciï¿½n sobre los productos disponibles
 CREATE TABLE Productos (
-    id INT PRIMARY KEY IDENTITY, -- Identificador único para cada producto
+    id INT PRIMARY KEY IDENTITY, -- Identificador ï¿½nico para cada producto
     nombre NVARCHAR(100) NOT NULL, -- Nombre del producto
-    descripcion NVARCHAR(255), -- Descripción del producto
+    descripcion NVARCHAR(255), -- Descripciï¿½n del producto
     precio DECIMAL(10, 2) NOT NULL, -- Precio del producto con dos decimales
-    categoria NVARCHAR(50) -- Categoría a la que pertenece el producto
+    categoria NVARCHAR(50) -- Categorï¿½a a la que pertenece el producto
 );
 
--- Tabla de Referencia: Almacena información sobre el inventario de productos
+-- Tabla de Referencia: Almacena informaciï¿½n sobre el inventario de productos
 CREATE TABLE Referencia (
-    id INT PRIMARY KEY IDENTITY, -- Identificador único para cada registro de inventario
-    producto_id INT NOT NULL FOREIGN KEY REFERENCES Productos(id), -- Referencia al producto (relación con la tabla Productos)
+    id INT PRIMARY KEY IDENTITY, -- Identificador ï¿½nico para cada registro de inventario
+    producto_id INT NOT NULL FOREIGN KEY REFERENCES Productos(id), -- Referencia al producto (relaciï¿½n con la tabla Productos)
     cantidad INT NOT NULL, -- Cantidad disponible en inventario
-    ubicacion NVARCHAR(100), -- Ubicación del producto en el almacén
+    ubicacion NVARCHAR(100), -- Ubicaciï¿½n del producto en el almacï¿½n
     tipo NVARCHAR(50) -- Tipo de acuerdo con la orden de compra o venta
 );
 
--- Tabla de Ordenes de Compra: Almacena información sobre las órdenes de compra
+-- Tabla de Ordenes de Compra: Almacena informaciï¿½n sobre las ï¿½rdenes de compra
 CREATE TABLE OrdenesCompra (
-    id INT PRIMARY KEY IDENTITY, -- Identificador único para cada orden de compra
-    usuario_id INT NOT NULL FOREIGN KEY REFERENCES Usuarios(id), -- Referencia al usuario que realizó la orden (relación con la tabla Usuarios)
+    id INT PRIMARY KEY IDENTITY, -- Identificador ï¿½nico para cada orden de compra
+    usuario_id INT NOT NULL FOREIGN KEY REFERENCES Usuarios(id), -- Referencia al usuario que realizï¿½ la orden (relaciï¿½n con la tabla Usuarios)
     fecha DATETIME NOT NULL DEFAULT GETDATE(), -- Fecha de la orden, por defecto se establece la fecha actual
     estado NVARCHAR(50) NOT NULL -- Estado de la orden (Pendiente, Completada)
 );
 
 -- Tabla de Detalle de Orden de Compra: Almacena los detalles de cada orden de compra
 CREATE TABLE DetalleOrdenCompra (
-    id INT PRIMARY KEY IDENTITY, -- Identificador único para cada detalle de orden
-    orden_compra_id INT NOT NULL FOREIGN KEY REFERENCES OrdenesCompra(id), -- Referencia a la orden de compra (relación con la tabla OrdenesCompra)
-    producto_id INT NOT NULL FOREIGN KEY REFERENCES Productos(id), -- Referencia al producto (relación con la tabla Productos)
+    id INT PRIMARY KEY IDENTITY, -- Identificador ï¿½nico para cada detalle de orden
+    orden_compra_id INT NOT NULL FOREIGN KEY REFERENCES OrdenesCompra(id), -- Referencia a la orden de compra (relaciï¿½n con la tabla OrdenesCompra)
+    producto_id INT NOT NULL FOREIGN KEY REFERENCES Productos(id), -- Referencia al producto (relaciï¿½n con la tabla Productos)
     cantidad INT NOT NULL, -- Cantidad del producto en la orden
     precio_unitario DECIMAL(10, 2) NOT NULL -- Precio unitario del producto en la orden
 );
@@ -59,31 +59,31 @@ CREATE TABLE DetalleOrdenCompra (
 INSERT INTO Roles (nombre)
 VALUES 
 ('Gerente'), -- Rol para el gerente
-('Encargado de almacén'); -- Rol para el encargado de almacén
+('Encargado de almacï¿½n'); -- Rol para el encargado de almacï¿½n
 
 -- Insertar datos en la tabla Usuarios
-INSERT INTO Usuarios (nombre, rol_id, email, contraseña)
+INSERT INTO Usuarios (nombre, rol_id, email, contraseï¿½a)
 VALUES 
-('Juan Pérez', 1, 'juan.perez@empresa.com', 'password123'), -- Juan Pérez es un Gerente
-('Ana Gómez', 2, 'ana.gomez@empresa.com', 'password456'); -- Ana Gómez es la Encargada de almacén
+('Juan Pï¿½rez', 1, 'juan.perez@empresa.com', 'password123'), -- Juan Pï¿½rez es un Gerente
+('Ana Gï¿½mez', 2, 'ana.gomez@empresa.com', 'password456'); -- Ana Gï¿½mez es la Encargada de almacï¿½n
 
 -- Insertar datos en la tabla Productos
 INSERT INTO Productos (nombre, descripcion, precio, categoria)
 VALUES 
-('Laptop', 'Laptop de 15 pulgadas', 1200.00, 'Electrónica'), -- Producto: Laptop
-('Mouse', 'Mouse inalámbrico', 25.00, 'Accesorios'); -- Producto: Mouse
+('Laptop', 'Laptop de 15 pulgadas', 1200.00, 'Electrï¿½nica'), -- Producto: Laptop
+('Mouse', 'Mouse inalï¿½mbrico', 25.00, 'Accesorios'); -- Producto: Mouse
 
 -- Insertar datos en la tabla Referencia
 INSERT INTO Referencia (producto_id, cantidad, ubicacion, tipo)
 VALUES 
-(1, 50, 'Almacén A', 'Compra'), -- 50 Laptops en Almacén A (tipo: Compra)
-(2, 200, 'Almacén B', 'Compra'); -- 200 Mouse en Almacén B (tipo: Compra)
+(1, 50, 'Almacï¿½n A', 'Compra'), -- 50 Laptops en Almacï¿½n A (tipo: Compra)
+(2, 200, 'Almacï¿½n B', 'Compra'); -- 200 Mouse en Almacï¿½n B (tipo: Compra)
 
 -- Insertar datos en la tabla Roles
 INSERT INTO Roles (nombre)
 VALUES 
 ('Gerente'), -- Rol para el gerente
-('Encargado de almacén'), -- Rol para el encargado de almacén
+('Encargado de almacï¿½n'), -- Rol para el encargado de almacï¿½n
 ('Proveedores'); -- Nuevo rol para los proveedores
 
  select * from Roles
